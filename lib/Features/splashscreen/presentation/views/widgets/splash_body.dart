@@ -1,5 +1,7 @@
+import 'package:bookly_app/Features/home/presentation/views/home_view.dart';
 import 'package:bookly_app/core/utils/assets_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -15,12 +17,16 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   void initState() {
     animationController =
-        AnimationController(vsync: this, duration: const Duration(seconds: 2));
+        AnimationController(vsync: this, duration: const Duration(seconds: 1));
     slidingAnimation =
         Tween<Offset>(begin: const Offset(0, 2), end: const Offset(0, 0))
             .animate(animationController);
     // animationController.repeat();   repeat
     animationController.forward();
+
+    Future.delayed(const Duration(seconds: 3), () {
+      Get.toNamed(HomeView.id);
+    });
     super.initState();
   }
 
