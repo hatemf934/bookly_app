@@ -10,9 +10,12 @@ class HomeViewBody extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.only(top: 47, left: 30),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomAppBar(),
           FeaturedListView(),
+          SizedBox(height: 50),
+          Text("Best Seller"),
         ],
       ),
     );
