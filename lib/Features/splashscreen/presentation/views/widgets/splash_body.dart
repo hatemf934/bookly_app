@@ -16,17 +16,9 @@ class _SplashViewBodyState extends State<SplashViewBody>
   late AnimationController animationController;
   @override
   void initState() {
-    animationController =
-        AnimationController(vsync: this, duration: const Duration(seconds: 1));
-    slidingAnimation =
-        Tween<Offset>(begin: const Offset(0, 2), end: const Offset(0, 0))
-            .animate(animationController);
-    // animationController.repeat();   repeat
-    animationController.forward();
+    initanimation();
 
-    Future.delayed(const Duration(seconds: 3), () {
-      Get.toNamed(HomeView.id);
-    });
+    initnavigation();
     super.initState();
   }
 
@@ -46,5 +38,21 @@ class _SplashViewBodyState extends State<SplashViewBody>
             position: slidingAnimation, child: Image.asset(AssetManager.klogo));
       },
     ));
+  }
+
+  void initanimation() {
+    animationController =
+        AnimationController(vsync: this, duration: const Duration(seconds: 1));
+    slidingAnimation =
+        Tween<Offset>(begin: const Offset(0, 2), end: const Offset(0, 0))
+            .animate(animationController);
+    // animationController.repeat();   repeat
+    animationController.forward();
+  }
+
+  void initnavigation() {
+    Future.delayed(const Duration(seconds: 3), () {
+      Get.toNamed(HomeView.id);
+    });
   }
 }
