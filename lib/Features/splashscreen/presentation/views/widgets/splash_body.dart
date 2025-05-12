@@ -52,7 +52,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void initnavigation() {
     Future.delayed(const Duration(seconds: 2), () {
       // ignore: use_build_context_synchronously
-      context.go(GoRouterClass.khomeview);
+      GoRouter.of(context).push(GoRouterClass.khomeview);
     });
   }
 }

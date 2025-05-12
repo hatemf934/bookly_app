@@ -1,3 +1,6 @@
+import 'package:bookly_app/Features/home/presentation/views/widgets/Featured_list_view_item.dart';
+import 'package:bookly_app/Features/home/presentation/views/widgets/custom_details_app_bar.dart';
+import 'package:bookly_app/constant.dart';
 import 'package:flutter/material.dart';
 
 class DetailsBookViewBody extends StatelessWidget {
@@ -5,6 +8,19 @@ class DetailsBookViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    double width = MediaQuery.of(context).size.width;
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: kPrimarypadding),
+      child: Column(
+        children: [
+          const SizedBox(height: 20),
+          const CustomDetailsAppBar(),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: width * .17),
+            child: const FeaturedListViewItem(),
+          ),
+        ],
+      ),
+    );
   }
 }

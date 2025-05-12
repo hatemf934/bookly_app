@@ -13,7 +13,7 @@ class BoxBestSellerItem extends StatelessWidget {
       padding: const EdgeInsets.only(top: 10, right: 45),
       child: InkWell(
         onTap: () {
-          context.go(GoRouterClass.kdetailsview);
+          GoRouter.of(context).push(GoRouterClass.kdetailsview);
         },
         child: Row(
           children: [
