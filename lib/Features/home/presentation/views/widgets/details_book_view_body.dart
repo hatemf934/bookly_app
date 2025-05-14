@@ -13,27 +13,34 @@ class DetailsBookViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kPrimarypadding),
-      child: Column(
-        children: [
-          const SizedBox(height: 20),
-          const CustomDetailsAppBar(),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * .17),
-            child: const FeaturedListViewItem(),
+    return CustomScrollView(
+      slivers: [
+        SliverFillRemaining(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: kPrimarypadding),
+            child: Column(
+              children: [
+                const SizedBox(height: 20),
+                const CustomDetailsAppBar(),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: width * .17),
+                  child: const FeaturedListViewItem(),
+                ),
+                const TextDetailsBook(),
+                const SizedBox(height: 30),
+                const BoxSellerReview(),
+                const Expanded(child: SizedBox(height: 30)),
+                Text(
+                  "You can also like",
+                  style: Styles.textStyle14,
+                ),
+                const FeaturedDetailsListView(),
+                const SizedBox(height: 20),
+              ],
+            ),
           ),
-          const TextDetailsBook(),
-          const SizedBox(height: 30),
-          const BoxSellerReview(),
-          const SizedBox(height: 30),
-          Text(
-            "You can also like",
-            style: Styles.textStyle14,
-          ),
-          const FeaturedDetailsListView()
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
