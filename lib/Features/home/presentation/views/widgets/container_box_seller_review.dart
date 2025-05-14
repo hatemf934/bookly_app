@@ -12,7 +12,7 @@ class ContainerBoxSellerReview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
+      height: 60,
       decoration:
           BoxDecoration(color: backgroundcolor, borderRadius: borderRadius),
       child: Center(child: childtext),
