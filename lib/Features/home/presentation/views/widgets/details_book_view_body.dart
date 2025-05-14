@@ -30,9 +30,12 @@ class DetailsBookViewBody extends StatelessWidget {
                 const SizedBox(height: 30),
                 const BoxSellerReview(),
                 const Expanded(child: SizedBox(height: 30)),
-                Text(
-                  "You can also like",
-                  style: Styles.textStyle14,
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "You can also like",
+                    style: Styles.textStyle14,
+                  ),
                 ),
                 const FeaturedDetailsListView(),
                 const SizedBox(height: 20),
