@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 class HomeRepoImplement implements HomeRepo {
   final ApiClass apiClass;
 
-  HomeRepoImplement({required this.apiClass});
+  HomeRepoImplement(this.apiClass);
   @override
   Future<Either<Faliure, List<Bookmodel>>> fetchnewstbooks() async {
     try {
