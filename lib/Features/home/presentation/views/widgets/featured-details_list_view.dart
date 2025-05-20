@@ -13,7 +13,10 @@ class FeaturedDetailsListView extends StatelessWidget {
           itemCount: 10,
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
-            return const FeaturedListViewItem();
+            return const FeaturedListViewItem(
+              imageUrl:
+                  "https://f.nooncdn.com/p/pzsku/Z272FD2DEABEE8CF8E0BFZ/45/_/1708507217/c7604877-c85c-4fca-bc27-7650420bbc7d.jpg?width=800",
+            );
           }),
     );
   }
